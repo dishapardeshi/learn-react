@@ -3,8 +3,9 @@ import {render} from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 import './css/style.css';
-import StorePicker from './components/StorePicker';
+//import StorePicker from './components/StorePicker';
+import App from './components/App';
 
-render(<StorePicker />, document.getElementById('root'));
+render(<App />, document.getElementById('main'));
 
 registerServiceWorker();
