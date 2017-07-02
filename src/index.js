@@ -1,8 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {render} from 'react-dom';
+
+import './css/style.css';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class StorePicker extends React.Component {
+
+  render(){
+    return (
+      <div>
+        <p>Hello</p>
+      </div>
+    );
+  }
+
+}
+
+render(<StorePicker />, document.getElementById('root'));
+
 registerServiceWorker();
