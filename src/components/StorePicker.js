@@ -15,6 +15,7 @@ class StorePicker extends React.Component {
     event.preventDefault();
     console.log(`URL is changed`);
     let storeId = this.storeInput.value;
+    console.log(`Going to store ${storeId}`);
     this.context.router.history.push(`/store/${storeId}`);
   }
 
