@@ -7,7 +7,7 @@ export class Inventory extends Component {
     return (
       <div>
         <p>Inventory</p>
-        <AddFishForm />
+        <AddFishForm addFish={this.props.addFish}/>
       </div>
     );
   }

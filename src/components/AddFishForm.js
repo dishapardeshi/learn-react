@@ -16,7 +16,7 @@ export class AddFishForm extends Component {
     };
 
     console.log({fish});
-
+    this.props.addFish(fish);
   }
 
   render() {
