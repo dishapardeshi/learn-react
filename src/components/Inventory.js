@@ -37,7 +37,7 @@ export class Inventory extends Component {
         onChange={(e) => this.handleChange(e,key)} value={fish.desc} placeholder="Fish Desc"></textarea>
       <input type="text" name="image"
         onChange={(e) => this.handleChange(e,key)} value={fish.image} placeholder="Fish Image"/>
-
+      <button onClick={() => this.props.removeFish(key)}>Remove Fish</button>
     </div>);
   }
 
