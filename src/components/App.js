@@ -6,6 +6,7 @@ import { Inventory } from './Inventory';
 import { Fish } from './Fish';
 
 import sampleFishes from '../sample-fishes';
+import base from '../base';
 
 class App extends React.Component {
 
@@ -20,6 +21,16 @@ class App extends React.Component {
     this.addFish = this.addFish.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
+  }
+
+  componentWillMount() {
+    const storeId = this.props.match.params["storeId"];
+    console.log('In componentWillMount with storeid '+storeId);
+    this.ref = base.syncState(`${storeId}/fishes`,
+    {
+      context: this,
+      state: 'fishes'
+    });
   }
 
   addFish(fish){
