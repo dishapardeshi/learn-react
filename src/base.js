@@ -1,5 +1,6 @@
 import Rebase from 're-base';
 import firebase from 'firebase/app';
+import auth from 'firebase/auth';
 import database from 'firebase/database';
 
 var app = firebase.initializeApp({
@@ -9,7 +10,10 @@ var app = firebase.initializeApp({
   projectId: "learn-react-a9d23",
 });
 
+var authApp = firebase.auth(app);
 var db = database(app);
 var base = Rebase.createClass(db);
 
-export default base;
+export {
+ base
+};

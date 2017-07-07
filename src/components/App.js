@@ -7,7 +7,7 @@ import { Inventory } from './Inventory';
 import { Fish } from './Fish';
 
 import sampleFishes from '../sample-fishes';
-import base from '../base';
+import {app, base} from '../base';
 
 class App extends React.Component {
 
@@ -122,6 +122,7 @@ class App extends React.Component {
           fishes={this.state.fishes}
           updateFish={this.updateFish}
           removeFish={this.removeFish}
+          storeId={this.props.match.params["storeId"]}
           />
       </div>
     );
